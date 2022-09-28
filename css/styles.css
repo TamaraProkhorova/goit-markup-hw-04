@@ -77,11 +77,14 @@ img {
 .web {
   color: var(--accent-color);
 }
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
 .header-list {
   display: flex;
   margin-left: 92px;
 }
-.header-item:not(:last-child) {
+.header-contacts-item:not(:last-child) {
   margin-right: 50px;
 }
 .header-link {
@@ -105,34 +108,30 @@ img {
   display: flex;
   margin-left: auto;
 }
-.header-email {
+.contacts {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   cursor: pointer;
   color: var(--text-color-three);
-  display: block;
   padding: 32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.header-email:hover,
-.header-email:focus {
+.header-contacts-icon {
+  fill: var(--text-color-three);
+  margin-right: 10px;
+}
+.contacts:hover,
+.contacts:focus {
   color: var(--accent-color);
   cursor: pointer;
 }
-.header-tel {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  color: var(--text-color-three);
-  display: block;
-  padding: 32px 0;
-}
-.header-tel:hover,
-.header-tel:focus {
-  color: var(--accent-color);
+.contacts:hover .header-contacts-icon,
+.contacts:focus .header-contacts-icon {
+  fill: var(--accent-color);
 }
 
 /*------ Hero------ */
@@ -150,8 +149,12 @@ img {
   margin-left: auto;
   margin-right: auto;
   background-repeat: no-repeat;
-  background-color: rgba(47, 48, 58, 0.4);
-  background-image: url(../images/img-hero.jpg);
+  /* background-color: rgba(47, 48, 58, 0.4); */
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/img-hero.jpg);
 }
 .hero-title {
   font-weight: 900;
@@ -172,7 +175,7 @@ img {
   border-radius: 4px;
   cursor: pointer;
   border-color: transparent;
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   letter-spacing: 0.06em;
   background: var(--accent-color);
   color: var(--text-color-one);
@@ -289,6 +292,26 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--text-color-three);
+  margin-bottom: 30px;
+}
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.team-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--text-color-three);
+}
+.team-soc-link:hover,
+.team-soc-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--text-color-one);
 }
 
 /* ----------Footer--------- */
